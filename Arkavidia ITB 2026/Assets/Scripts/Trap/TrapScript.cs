@@ -31,8 +31,7 @@ public class TrapScript : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            IDamageable damageable =
-                collision.gameObject.GetComponent<IDamageable>();
+            IDamageable damageable = collision.gameObject.GetComponent<IDamageable>();
 
             if (damageable != null)
             {
