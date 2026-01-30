@@ -19,12 +19,9 @@ public class TrapScript : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
+    public void TrapTrigger()
     {
-        if (other.CompareTag("Player"))
-        {
             moveToTarget = true;
-        }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

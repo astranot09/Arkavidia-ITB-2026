@@ -15,6 +15,7 @@ public class Player : MonoBehaviour, IDamageable
         currHealth -= damage;
         if(currHealth <= 0)
         {
+            Debug.Log("Dead");
             //teleport ke waypoin
         }
     }
