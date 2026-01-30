@@ -9,6 +9,7 @@ TagManager:
   - ProjectionJump
   - ProjectionStop
   - ProjectionMove
+  - PlayerProjection
   layers:
   - Default
   - TransparentFX
