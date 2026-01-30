@@ -5,6 +5,10 @@ TagManager:
   serializedVersion: 3
   tags:
   - Ground
+  - ProjectionReverse
+  - ProjectionJump
+  - ProjectionStop
+  - ProjectionMove
   layers:
   - Default
   - TransparentFX
