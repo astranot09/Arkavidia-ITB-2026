@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour, IDamageable
 {
@@ -7,6 +8,7 @@ public class Player : MonoBehaviour, IDamageable
 
     private void Start()
     {
+        //transform.position = CheckPointManager.instance.GetLastCheckPoint().position;
         currHealth = maxHealth;
     }
 
@@ -16,7 +18,8 @@ public class Player : MonoBehaviour, IDamageable
         if(currHealth <= 0)
         {
             Debug.Log("Dead");
-            transform.position = CheckPointManager.instance.GetLastCheckPoint().position;
+            
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
     }
 
