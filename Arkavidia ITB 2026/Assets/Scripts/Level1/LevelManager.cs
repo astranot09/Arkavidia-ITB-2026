@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using Unity.Cinemachine;
 
 public class LevelManager : MonoBehaviour
 {
@@ -27,6 +28,8 @@ public class LevelManager : MonoBehaviour
         yield return null;
         GameObject player = GameObject.FindGameObjectWithTag("Player");
         playerLocation = CheckPointManager.instance.SpawnAtCheckPoint();
+        CinemachineConfiner2D camera = GameObject.FindFirstObjectByType<CinemachineConfiner2D>(); ;
+        camera.BoundingShape2D = CheckPointManager.instance.SpawnAtCamera();
         player.transform.position = playerLocation.position;
     }
 }

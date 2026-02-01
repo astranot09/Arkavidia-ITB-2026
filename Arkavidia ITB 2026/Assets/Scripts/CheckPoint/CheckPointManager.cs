@@ -22,13 +22,15 @@ public class CheckPointManager : MonoBehaviour
 
     [SerializeField] private Transform lastCheckpoint;
     [SerializeField] private string checkpointName;
+    [SerializeField] private string colliderName;
     [SerializeField] private Collider2D saveCollider;
 
-    public void setCheckPoint(Transform checkpointLocation, string name)
+    public void setCheckPoint(Transform checkpointLocation, string nameSavePoint, string colliderName)
     {
         Debug.Log("name");
         lastCheckpoint = checkpointLocation;
-        checkpointName = name;
+        checkpointName = nameSavePoint;
+        this.colliderName = colliderName;
     }
 
     public Transform GetLastCheckPoint()
@@ -44,6 +46,13 @@ public class CheckPointManager : MonoBehaviour
         if (checkpointName != null)
             lastCheckpoint = GameObject.Find(checkpointName).transform;
         return lastCheckpoint;
+    }
+    public Collider2D SpawnAtCamera()
+    {
+        Debug.Log("Hi meki");
+        if (colliderName != null)
+            saveCollider = GameObject.Find(colliderName).GetComponent<Collider2D>();
+        return saveCollider;
     }
 
 }

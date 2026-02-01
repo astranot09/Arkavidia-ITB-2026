@@ -22,6 +22,8 @@ public class PlayerProjectionScript : MonoBehaviour
 
     [SerializeField] private float jumpForce;
 
+    public ProjectionSpawner projectionSpawn;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -56,6 +58,12 @@ public class PlayerProjectionScript : MonoBehaviour
         {
             Debug.Log("Move");
             currSpeed = speed;
+        }
+        if (collision.CompareTag("ProjectionDelete"))
+        {
+            Debug.Log("Delete");
+            projectionSpawn.Spawn();
+            Destroy(gameObject);
         }
     }
 }

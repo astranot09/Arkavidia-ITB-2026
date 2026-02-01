@@ -107,6 +107,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::TrapScript
   location: {fileID: 0}
   speed: 10
+  otherTrigger: 0
+  otherTrap: {fileID: 0}
+  giveDamage: 1
 --- !u!61 &5360809951485776278
 BoxCollider2D:
   m_ObjectHideFlags: 0
