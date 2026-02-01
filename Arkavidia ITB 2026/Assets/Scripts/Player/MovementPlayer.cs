@@ -7,7 +7,7 @@ public class MovementPlayer : MonoBehaviour
     [SerializeField] private float jumpPower;
     private GroundChecker GroundChecker;
     private Rigidbody2D rb;
-    private Vector2 direction;
+    public Vector2 direction { get; private set; }
 
     private void Awake()
     {
