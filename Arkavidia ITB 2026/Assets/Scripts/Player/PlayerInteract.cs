@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class PlayerInteract : MonoBehaviour
 {
@@ -44,6 +45,15 @@ public class PlayerInteract : MonoBehaviour
                 lastInteractable.OffFocus();
             }
             lastInteractable = interactable;
+        }
+    }
+
+    public void Interact(InputAction.CallbackContext ctx)
+    {
+        if (ctx.started)
+        {
+            Debug.Log("player interacted");
+            interactable.OnInteract();
         }
     }
 

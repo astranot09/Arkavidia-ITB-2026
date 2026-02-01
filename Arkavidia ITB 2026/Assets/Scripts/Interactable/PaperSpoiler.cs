@@ -3,15 +3,17 @@ using UnityEngine;
 public class PaperSpoiler : MonoBehaviour, IInteractable
 {
     [SerializeField] private GameObject textArea;
+    [SerializeField] private GameObject notification;
 
     public void OffFocus()
     {
-        Debug.Log("Off focus");
+        notification.SetActive(false);
+        textArea.SetActive(false);
     }
 
     public void OnFocus()
     {
-        Debug.Log("On focus");
+        notification.SetActive(true);
     }
 
     public void OnInteract()
