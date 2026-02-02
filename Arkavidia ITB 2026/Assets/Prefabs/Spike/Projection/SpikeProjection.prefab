@@ -10,11 +10,11 @@ GameObject:
   m_Component:
   - component: {fileID: 1972291625213485935}
   - component: {fileID: 2405499938200827423}
-  - component: {fileID: 575105183495683093}
   - component: {fileID: 4253203090545291036}
-  m_Layer: 0
+  - component: {fileID: -2857762344542872174}
+  m_Layer: 8
   m_Name: SpikeProjection
-  m_TagString: Untagged
+  m_TagString: ProjectionDead
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -83,7 +83,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 75f5f34dc1b5347e0b8351032682f224, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.68776405, g: 0.8679245, b: 0.297496, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -93,20 +93,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &575105183495683093
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1060517075535061225}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 61aa4df0e3952ac40be6d4b0f7da004c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::TrapScript
-  location: {fileID: 0}
-  speed: 10
 --- !u!61 &4253203090545291036
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -153,6 +139,23 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &-2857762344542872174
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1060517075535061225}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29246189366f7f64ea63f3ecbd13d22e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TrapProjection
+  location: {fileID: 0}
+  normalLocation: {x: 0, y: 0}
+  speed: 10
+  moveToTarget: 0
+  backToOriginal: 0
 --- !u!1 &8635360829177717335
 GameObject:
   m_ObjectHideFlags: 0
@@ -163,8 +166,8 @@ GameObject:
   m_Component:
   - component: {fileID: 195530232821777840}
   - component: {fileID: 3895873214291822531}
-  - component: {fileID: 2602586961251967675}
-  m_Layer: 0
+  - component: {fileID: 7652277493907861900}
+  m_Layer: 8
   m_Name: Trigger
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -232,7 +235,7 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.6198435, y: 2.3305483}
   m_EdgeRadius: 0
---- !u!114 &2602586961251967675
+--- !u!114 &7652277493907861900
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -241,7 +244,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 8635360829177717335}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: df5e42f239eccfd47a3377aafc12df6d, type: 3}
+  m_Script: {fileID: 11500000, guid: 687b4d2848f23b14eb2f6f41cd354fb8, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::TriggerTrapScript
-  trapScript: {fileID: 575105183495683093}
+  m_EditorClassIdentifier: Assembly-CSharp::TrapProjectionTrigger
+  trapProjectionScript: {fileID: -2857762344542872174}

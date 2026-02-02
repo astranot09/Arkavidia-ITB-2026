@@ -21,6 +21,7 @@ public class PlayerProjectionScript : MonoBehaviour
     private Vector2 dir = Vector2.right;
 
     [SerializeField] private float jumpForce;
+    [SerializeField] private Vector2 location;
 
     public ProjectionSpawner projectionSpawn;
 
@@ -28,6 +29,7 @@ public class PlayerProjectionScript : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         currSpeed = speed;
+        location = this.gameObject.transform.position;
     }
 
     // Update is called once per frame
@@ -62,15 +64,20 @@ public class PlayerProjectionScript : MonoBehaviour
         if (collision.CompareTag("ProjectionDelete"))
         {
             Debug.Log("Delete");
-            projectionSpawn.Spawn();
-            Destroy(gameObject);
+            this.gameObject.transform.position = location;
+            //projectionSpawn.Spawn();
+            //Destroy(gameObject);
         }
         if (collision.CompareTag("ProjectionDead"))
         {
             Debug.Log("Dead");
+
+            collision.GetComponent<TrapProjection>().BackToNormal();
+            this.gameObject.transform.position = location;
+            rb.linearVelocity = new Vector2 (0,0);
             //play dead anim
-            projectionSpawn.Spawn();
-            Destroy(gameObject);
+            //projectionSpawn.Spawn();
+            //Destroy(gameObject);
         }
     }
 }

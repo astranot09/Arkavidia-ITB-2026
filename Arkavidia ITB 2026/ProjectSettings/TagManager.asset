@@ -11,6 +11,7 @@ TagManager:
   - ProjectionMove
   - PlayerProjection
   - ProjectionDelete
+  - ProjectionDead
   layers:
   - Default
   - TransparentFX

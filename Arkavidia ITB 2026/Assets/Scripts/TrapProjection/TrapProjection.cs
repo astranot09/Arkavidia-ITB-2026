@@ -3,9 +3,16 @@ using UnityEngine;
 public class TrapProjection : MonoBehaviour
 {
     [SerializeField] private Transform location;
+    [SerializeField] private Vector2 normalLocation;
     [SerializeField] private float speed = 5f;
 
-    private bool moveToTarget = false;
+    [SerializeField] private bool moveToTarget = false;
+    [SerializeField] private bool backToOriginal = false;
+
+    private void Start()
+    {
+        normalLocation = this.gameObject.transform.position;
+    }
 
     void Update()
     {
@@ -17,30 +24,35 @@ public class TrapProjection : MonoBehaviour
                 speed * Time.deltaTime
             );
         }
+        if (backToOriginal)
+        {
+            transform.position = Vector2.MoveTowards(
+                transform.position,
+                normalLocation,
+                speed * Time.deltaTime
+            );
+        }
     }
 
     public void TrapTrigger()
     {
         moveToTarget = true;
+        backToOriginal = false;
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    public void BackToNormal()
     {
-        if (collision.gameObject.CompareTag("PlayerProjection"))
-        {
-            IDamageable damageable = collision.gameObject.GetComponent<IDamageable>();
+        moveToTarget = false;
+        backToOriginal = true;
+    }
 
-            if (damageable != null)
-            {
-                damageable.getDamage(1f);
-            }
-        }
-    }
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.CompareTag("PlayerProjection"))
-        {
-            moveToTarget = true;
-        }
-    }
+
+    //private void OnCollisionEnter2D(Collision2D collision)
+    //{
+    //    if (collision.gameObject.CompareTag("PlayerProjection"))
+    //    {
+    //        moveToTarget=false;
+    //        backToOriginal = true;
+    //    }
+    //}
 }
