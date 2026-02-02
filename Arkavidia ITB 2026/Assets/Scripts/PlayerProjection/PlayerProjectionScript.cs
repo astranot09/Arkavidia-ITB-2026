@@ -65,5 +65,12 @@ public class PlayerProjectionScript : MonoBehaviour
             projectionSpawn.Spawn();
             Destroy(gameObject);
         }
+        if (collision.CompareTag("ProjectionDead"))
+        {
+            Debug.Log("Dead");
+            //play dead anim
+            projectionSpawn.Spawn();
+            Destroy(gameObject);
+        }
     }
 }
