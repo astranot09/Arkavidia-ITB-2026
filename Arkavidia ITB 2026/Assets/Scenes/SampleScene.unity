@@ -730,6 +730,18 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1602973956
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1602973952}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5cf30893de974d46be8dc05a5fd29cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerAnimation
 --- !u!1001 &3533745553573685065
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -792,6 +804,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 8361787133532739915, guid: fd9d17d8de2350346a587a7f112f612f, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1602973955}
+    - targetCorrespondingSourceObject: {fileID: 8361787133532739915, guid: fd9d17d8de2350346a587a7f112f612f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1602973956}
   m_SourcePrefab: {fileID: 100100000, guid: fd9d17d8de2350346a587a7f112f612f, type: 3}
 --- !u!1001 &5680642080576820780
 PrefabInstance:
