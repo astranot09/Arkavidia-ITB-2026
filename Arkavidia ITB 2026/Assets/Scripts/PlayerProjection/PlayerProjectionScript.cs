@@ -14,6 +14,7 @@ public enum PathDo
 public class PlayerProjectionScript : MonoBehaviour
 {
     private Rigidbody2D rb;
+    private Animator animator;
 
 
     [SerializeField] private float speed;
@@ -30,6 +31,7 @@ public class PlayerProjectionScript : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         currSpeed = speed;
         location = this.gameObject.transform.position;
+        Debug.Log("projection animator = " + animator);
     }
 
     // Update is called once per frame
