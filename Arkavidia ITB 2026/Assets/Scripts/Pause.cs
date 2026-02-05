@@ -8,6 +8,10 @@ public class Pause : MonoBehaviour
     private void Awake()
     {
         pauseMenu = GameObject.Find("PausePanel").gameObject;
+        if(pauseMenu == null)
+        {
+            return;
+        }
     }
 
     public void OpenClosePauseMenu(InputAction.CallbackContext ctx)

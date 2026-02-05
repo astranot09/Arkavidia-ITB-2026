@@ -34,7 +34,7 @@ public class MovementPlayer : MonoBehaviour
 
     private void FixedUpdate()
     {
-        Debug.Log(rb.linearVelocityY);
+        //Debug.Log(rb.linearVelocityY);
         rb.linearVelocity = new Vector2(direction.normalized.x * speed, rb.linearVelocityY);
     }
 }
