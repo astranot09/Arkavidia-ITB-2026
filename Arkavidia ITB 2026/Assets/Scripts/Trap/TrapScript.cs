@@ -10,6 +10,11 @@ public class TrapScript : MonoBehaviour
     public bool otherTrigger = false;
 
 
+    [Header("One Used")]
+    public bool oneTime = false;
+    public bool alreadyTrigger = false;
+
+
     [SerializeField] private TrapScript otherTrap;
 
     [SerializeField] private bool giveDamage = true;
@@ -18,7 +23,14 @@ public class TrapScript : MonoBehaviour
     {
         if (moveToTarget)
         {
-            TrapDo();
+            if(oneTime && !alreadyTrigger)
+            {
+                alreadyTrigger = true;
+                TrapDo();
+            }
+            else if (!oneTime)
+                TrapDo();
+
         }
     }
 
