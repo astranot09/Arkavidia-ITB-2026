@@ -197,6 +197,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CheckPointScript
   saveLocation: {fileID: 137758681}
+  nameCheckPoint: 
+  camCollider: {fileID: 0}
+  nameCollider: 
 --- !u!212 &137758680
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -638,6 +641,75 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &856096370
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2860097179774244438, guid: 11c56ac2404ccd3419840bae4b2d8dff, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 8.14
+      objectReference: {fileID: 0}
+    - target: {fileID: 2860097179774244438, guid: 11c56ac2404ccd3419840bae4b2d8dff, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.53
+      objectReference: {fileID: 0}
+    - target: {fileID: 2860097179774244438, guid: 11c56ac2404ccd3419840bae4b2d8dff, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2860097179774244438, guid: 11c56ac2404ccd3419840bae4b2d8dff, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2860097179774244438, guid: 11c56ac2404ccd3419840bae4b2d8dff, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2860097179774244438, guid: 11c56ac2404ccd3419840bae4b2d8dff, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2860097179774244438, guid: 11c56ac2404ccd3419840bae4b2d8dff, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2860097179774244438, guid: 11c56ac2404ccd3419840bae4b2d8dff, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2860097179774244438, guid: 11c56ac2404ccd3419840bae4b2d8dff, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2860097179774244438, guid: 11c56ac2404ccd3419840bae4b2d8dff, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4763959506573598779, guid: 11c56ac2404ccd3419840bae4b2d8dff, type: 3}
+      propertyPath: m_Name
+      value: Spike (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7258181651926123097, guid: 11c56ac2404ccd3419840bae4b2d8dff, type: 3}
+      propertyPath: trapScript
+      value: 
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 6742149150340364780, guid: 11c56ac2404ccd3419840bae4b2d8dff, type: 3}
+    - {fileID: 7258181651926123097, guid: 11c56ac2404ccd3419840bae4b2d8dff, type: 3}
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4763959506573598779, guid: 11c56ac2404ccd3419840bae4b2d8dff, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2095342179}
+    - targetCorrespondingSourceObject: {fileID: 6385306794856417812, guid: 11c56ac2404ccd3419840bae4b2d8dff, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2040958176}
+  m_SourcePrefab: {fileID: 100100000, guid: 11c56ac2404ccd3419840bae4b2d8dff, type: 3}
 --- !u!1 &984104354
 GameObject:
   m_ObjectHideFlags: 0
@@ -1009,6 +1081,10 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: 9caa3d8a-6b2f-4e8e-8bad-6ede561bd9be
     m_ActionName: UI/TrackedDeviceOrientation
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: e149a342-dd13-48b1-b800-ff4e3547b556
+    m_ActionName: 'Player/Pause[/Keyboard/escape]'
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: 
@@ -1029,6 +1105,24 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2040958172 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6385306794856417812, guid: 11c56ac2404ccd3419840bae4b2d8dff, type: 3}
+  m_PrefabInstance: {fileID: 856096370}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2040958176
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2040958172}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d98f856a3dc73f0459b22d29334cc2f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TriggerRotate
+  trapScript: {fileID: 2095342179}
 --- !u!1 &2068200589
 GameObject:
   m_ObjectHideFlags: 0
@@ -1136,7 +1230,7 @@ Transform:
   m_GameObject: {fileID: 2068200589}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 5.48, y: -0.89, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1158,6 +1252,30 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Player
   maxHealth: 1
   currHealth: 1
+--- !u!1 &2095342178 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4763959506573598779, guid: 11c56ac2404ccd3419840bae4b2d8dff, type: 3}
+  m_PrefabInstance: {fileID: 856096370}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2095342179
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2095342178}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 038c04c5ed97c5c4c9db6b073beccae4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::RotateTrap
+  location: {fileID: 0}
+  speed: 5
+  otherTrigger: 0
+  oneTime: 1
+  alreadyTrigger: 0
+  otherTrap: {fileID: 0}
+  giveDamage: 1
 --- !u!1001 &643257097709371430
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1467,3 +1585,4 @@ SceneRoots:
   - {fileID: 2175653307484191599}
   - {fileID: 450933664}
   - {fileID: 5863964945909430356}
+  - {fileID: 856096370}
