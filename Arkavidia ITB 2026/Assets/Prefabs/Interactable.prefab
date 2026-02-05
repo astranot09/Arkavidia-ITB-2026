@@ -285,8 +285,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'penis penis penis penis penis penis penis penis penis penis penis penis
-    penis penis penis penis '
+  m_text: 'This is a spoiler, do you still want to read this?
+
+    (interact again
+    to read)'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -320,8 +322,8 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
-  m_VerticalAlignment: 256
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -392,8 +394,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 7929544615215058348}
   - {fileID: 664164003667109559}
+  - {fileID: 7929544615215058348}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &8353335832651282862
@@ -468,6 +470,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PaperSpoiler
   textArea: {fileID: 7577950269825745100}
   notification: {fileID: 4176836482074579213}
+  textPlaceholder: {fileID: 8754953284807106227}
+  text: 
 --- !u!61 &616996717525642827
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -523,6 +527,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7929544615215058348}
+  - component: {fileID: 2247901372100720723}
   m_Layer: 10
   m_Name: TextArea
   m_TagString: Untagged
@@ -547,3 +552,15 @@ Transform:
   - {fileID: 8702570239337525003}
   m_Father: {fileID: 2953321726927861741}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!210 &2247901372100720723
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7577950269825745100}
+  m_Enabled: 1
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 10
+  m_SortAtRoot: 0

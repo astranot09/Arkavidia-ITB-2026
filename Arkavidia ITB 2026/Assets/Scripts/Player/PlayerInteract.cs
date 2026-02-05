@@ -12,6 +12,7 @@ public class PlayerInteract : MonoBehaviour
     private RaycastHit2D hit;
     private IInteractable interactable;
     private IInteractable lastInteractable;
+    private bool confirm = false;
 
     private void Start()
     {
@@ -50,10 +51,15 @@ public class PlayerInteract : MonoBehaviour
 
     public void Interact(InputAction.CallbackContext ctx)
     {
-        if (ctx.started)
+        if (ctx.started && confirm == false)
         {
             Debug.Log("player interacted");
             interactable.OnInteract();
+            confirm = true;
+        }
+        else if(ctx.started && confirm == true)
+        {
+            interactable.OnInteractConfirm();
         }
     }
 

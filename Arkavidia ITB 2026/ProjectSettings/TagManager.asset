@@ -12,6 +12,7 @@ TagManager:
   - PlayerProjection
   - ProjectionDelete
   - ProjectionDead
+  - InvisGround
   layers:
   - Default
   - TransparentFX
