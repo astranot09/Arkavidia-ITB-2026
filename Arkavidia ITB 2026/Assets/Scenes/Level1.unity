@@ -505,11 +505,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 155470736}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9f1422692c83cdc48926269589fd8076, type: 3}
+  m_Script: {fileID: 11500000, guid: 286a8c32223a62746b395b0499d443e5, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::MapTransation
-  boundInto: {fileID: 0}
-  teleportTo: {fileID: 0}
+  m_EditorClassIdentifier: Assembly-CSharp::FinishScript
 --- !u!1 &176867727
 GameObject:
   m_ObjectHideFlags: 0

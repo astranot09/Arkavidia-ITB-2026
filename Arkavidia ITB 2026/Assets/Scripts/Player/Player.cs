@@ -15,11 +15,11 @@ public class Player : MonoBehaviour, IDamageable
     public void getDamage(float damage)
     {
         currHealth -= damage;
-        if(currHealth <= 0)
+        if(currHealth == 0)
         {
             Debug.Log("Dead");
-            
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+
+            TransitionManager.instance.StartReloadScene();
         }
     }
 
