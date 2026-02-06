@@ -34,6 +34,7 @@ public class PlayerInteract : MonoBehaviour
                 if(lastInteractable != null)
                 {
                     lastInteractable.OffFocus();
+                    confirm = false;
                 }
                 lastInteractable = interactable;
             }
@@ -44,6 +45,7 @@ public class PlayerInteract : MonoBehaviour
             if (lastInteractable != null)
             {
                 lastInteractable.OffFocus();
+                confirm = false;
             }
             lastInteractable = interactable;
         }
