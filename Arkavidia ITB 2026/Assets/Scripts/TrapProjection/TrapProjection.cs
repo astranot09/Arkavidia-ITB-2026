@@ -46,6 +46,14 @@ public class TrapProjection : MonoBehaviour
         backToOriginal = true;
     }
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("ProjectionBackNormal"))
+        {
+            BackToNormal();
+        }
+    }
+
 
     //private void OnCollisionEnter2D(Collision2D collision)
     //{
